@@ -1,31 +1,25 @@
 fileFormatVersion: 2
-guid: 5a92d2625d819974dbc4dc28b58b0daa
+guid: 2e095bcecf100f242bbaee03b8057738
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2649847697073447219
-    second: Dead_0
+      213: 3137921264339076471
+    second: Pac man_0
   - first:
-      213: -8293461521501190705
-    second: Dead_1
+      213: 2653822731888537742
+    second: Pac man_1
   - first:
-      213: -1631342717326862633
-    second: Dead_2
+      213: -6652764717960324156
+    second: Pac man_2
   - first:
-      213: -3927913518680497933
-    second: Dead_3
+      213: 6815517796297248302
+    second: Pac man_3
   - first:
-      213: -1057675302478342458
-    second: Dead_4
+      213: 6107743937467391390
+    second: Pac man_4
   - first:
-      213: -7954960911384535938
-    second: Dead_5
-  - first:
-      213: -1451345828014226549
-    second: Dead_6
-  - first:
-      213: -2214552090018719568
-    second: Dead_7
+      213: -7240216707301060693
+    second: Pac man_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -115,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dead_0
+      name: Pac man_0
       rect:
         serializedVersion: 2
-        x: 56
-        y: 592
-        width: 120
-        height: 120
+        x: 36
+        y: 292
+        width: 56
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,20 +123,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33123f4e07626c420800000000000000
-      internalID: 2649847697073447219
+      spriteID: 7754316b3c22c8b20800000000000000
+      internalID: 3137921264339076471
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dead_1
+      name: Pac man_1
       rect:
         serializedVersion: 2
-        x: 312
-        y: 592
-        width: 120
-        height: 104
+        x: 164
+        y: 292
+        width: 60
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +144,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc50d84dfa4b7ec80800000000000000
-      internalID: -8293461521501190705
+      spriteID: e80b21fc6b544d420800000000000000
+      internalID: 2653822731888537742
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dead_2
+      name: Pac man_2
       rect:
         serializedVersion: 2
-        x: 568
-        y: 592
-        width: 120
-        height: 88
+        x: 36
+        y: 164
+        width: 60
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +165,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d6dfca117e4c59e0800000000000000
-      internalID: -1631342717326862633
+      spriteID: 4cb19b3acb1aca3a0800000000000000
+      internalID: -6652764717960324156
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dead_3
+      name: Pac man_3
       rect:
         serializedVersion: 2
-        x: 56
-        y: 336
-        width: 120
-        height: 72
+        x: 164
+        y: 164
+        width: 64
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,20 +186,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f0289a377f3d79c0800000000000000
-      internalID: -3927913518680497933
+      spriteID: e2e86a85355959e50800000000000000
+      internalID: 6815517796297248302
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dead_4
+      name: Pac man_4
       rect:
         serializedVersion: 2
-        x: 312
-        y: 336
-        width: 120
-        height: 56
+        x: 36
+        y: 36
+        width: 64
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,20 +207,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c6131c8ae16251f0800000000000000
-      internalID: -1057675302478342458
+      spriteID: e9d1acb30c013c450800000000000000
+      internalID: 6107743937467391390
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dead_5
+      name: Pac man_5
       rect:
         serializedVersion: 2
-        x: 576
-        y: 336
-        width: 104
-        height: 40
+        x: 164
+        y: 36
+        width: 64
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,50 +228,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7c9ec2c23d4a9190800000000000000
-      internalID: -7954960911384535938
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dead_6
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 80
-        width: 88
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b8387f2b8a8cbdbe0800000000000000
-      internalID: -1451345828014226549
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dead_7
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 80
-        width: 40
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0b8d5d97b945441e0800000000000000
-      internalID: -2214552090018719568
+      spriteID: bafc878d345958b90800000000000000
+      internalID: -7240216707301060693
       vertices: []
       indices: 
       edges: []
