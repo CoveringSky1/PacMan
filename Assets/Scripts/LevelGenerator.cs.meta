@@ -1,16 +1,9 @@
 fileFormatVersion: 2
-guid: 464c515665f5abf44ba91874965bd0f9
+guid: f6f1d78067a62fa498fe2730c9cdfc4f
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - outsideCorner: {instanceID: 0}
-  - outsideWall: {instanceID: 0}
-  - insideCorner: {instanceID: 0}
-  - insideWall: {instanceID: 0}
-  - Tjunction: {instanceID: 0}
-  - powerPellet: {instanceID: 0}
-  - Pellet: {instanceID: 0}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
