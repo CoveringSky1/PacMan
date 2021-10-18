@@ -5405,8 +5405,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 344, y: -126}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 383, y: -126}
+  m_SizeDelta: {x: 130, y: 34.0769}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &404439656
 MonoBehaviour:
@@ -5532,6 +5532,7 @@ MonoBehaviour:
   use: 1
   play: {fileID: 404439656}
   p: 0
+  animator: {fileID: 9100000, guid: 21e593af2f2a5c64caeaa5307e7cb6da, type: 2}
 --- !u!1 &409331517
 GameObject:
   m_ObjectHideFlags: 0
@@ -9705,7 +9706,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7.8690853
+  orthographic size: 8.263332
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

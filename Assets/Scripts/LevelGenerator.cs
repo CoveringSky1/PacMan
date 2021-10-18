@@ -22,10 +22,11 @@ public class LevelGenerator : MonoBehaviour
     public bool use;
     public Button play;
     public int p;
+    public RuntimeAnimatorController animator;
 
     public void emptyGameobject()
     {
-        foreach (GameObject g in SceneManager.GetActiveScene().GetRootGameObjects())
+        foreach (GameObject g in SceneManager.GetSceneByName("Level1").GetRootGameObjects())
         {
             if (g.tag != "Level1")
             {
@@ -57,7 +58,7 @@ public class LevelGenerator : MonoBehaviour
             Horizontal4 = 1.5f;
 
             levelMap = new int[,] {  { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0 },
-                                 { 0, 0, 0, 0, 0, 2, 5, 3, 3, 0, 4, 0, 0, 0 },
+                                 { 0, 0, 0, 0, 0, 2, 5, 4, 4, 0, 4, 0, 0, 0 },
                                  { 0, 0, 0, 0, 0, 2, 5, 4, 4, 0, 3, 4, 4, 0 },
                                  { 0, 0, 0, 0, 0, 2, 5, 4, 4, 0, 0, 0, 0, 0 },
                                  { 0, 0, 0, 0, 0, 2, 5, 4, 0, 4, 4, 3, 0, 3 },
@@ -72,7 +73,7 @@ public class LevelGenerator : MonoBehaviour
                                  { 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 4 },
                                  { 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 7 }, };
             int[,] levelMap1 = new int[,] { {0, 0, 0, 4, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0 },
-                                            {0, 0, 0, 4, 0, 3, 3, 5, 2, 0, 0, 0, 0, 0 },
+                                            {0, 0, 0, 4, 0, 4, 4, 5, 2, 0, 0, 0, 0, 0 },
                                             {0, 4, 4, 3, 0, 4, 4, 5, 2, 0, 0, 0, 0, 0 },
                                             {0, 0, 0, 0, 0, 4, 4, 5, 2, 0, 0, 0, 0, 0 },
                                             {3, 0, 3, 4, 4, 0, 4, 5, 2, 0, 0, 0, 0, 0 },
@@ -194,6 +195,14 @@ public class LevelGenerator : MonoBehaviour
                         {
                             g.transform.Rotate(0, 0, 90, 0);
                         }
+                        if (i==7&&j==1)
+                        {
+                            g.transform.Rotate(0,0,270,0);
+                        }
+                        if (i == 8 && j == 1)
+                        {
+                            g.transform.Rotate(0, 0, 90, 0);
+                        }
                         if (((j < 14 && j > 10) || (j > 4 && j < 7) && i == 13) || (i == 10 && j < 2))
                         {
                             g.transform.Rotate(0, 0, 270, 0);
@@ -220,6 +229,8 @@ public class LevelGenerator : MonoBehaviour
                         g.transform.localScale = new Vector3(3, 3, 0);
                         var s = g.AddComponent<SpriteRenderer>();
                         s.sprite = powerPellet;
+                        var a = g.AddComponent<Animator>();
+                        a.runtimeAnimatorController = animator;
                     }
                     if (levelMap[j, i] == 7)
                     {
@@ -307,6 +318,14 @@ public class LevelGenerator : MonoBehaviour
                         {
                             g.transform.Rotate(0, 0, 270, 0);
                         }
+                        if (i == 5 && j == 1)
+                        {
+                            g.transform.Rotate(0, 0, 270, 0);
+                        }
+                        if (i == 6 && j == 1)
+                        {
+                            g.transform.Rotate(0, 0, 90, 0);
+                        }
                         var s = g.AddComponent<SpriteRenderer>();
                         s.sprite = insideWall;
                     }
@@ -324,6 +343,8 @@ public class LevelGenerator : MonoBehaviour
                         g.transform.localScale = new Vector3(3, 3, 0);
                         var s = g.AddComponent<SpriteRenderer>();
                         s.sprite = powerPellet;
+                        var a = g.AddComponent<Animator>();
+                        a.runtimeAnimatorController = animator;
                     }
                     if (levelMap1[j, i] == 7)
                     {
@@ -341,14 +362,16 @@ public class LevelGenerator : MonoBehaviour
                     if (levelMap2[j, i] == 1)
                     {
                         GameObject g = new GameObject("Outside Corner");
-                        g.transform.position = new Vector3(i - (Horizontal3 - 0.5f), j - (Vertical3 - 0.5f));
+                        g.transform.position = new Vector3(i - (Horizontal3 - 0.5f) +0.25f, j - (Vertical3 - 0.5f)-0.2f);
                         if (i == 5 && j == 9)
                         {
                             g.transform.Rotate(0, 0, 180, 0);
+                            g.transform.position = new Vector3(i - (Horizontal3 - 0.5f) - 0.27f, j - (Vertical3 - 0.5f) + 0.26f);
                         }
                         if (i == 0 && j == 0)
                         {
                             g.transform.Rotate(0, 0, 90, 0);
+                            g.transform.position = new Vector3(i - (Horizontal3 - 0.5f) + 0.2f, j - (Vertical3 - 0.5f) + 0.25f);
                         }
                         var s = g.AddComponent<SpriteRenderer>();
                         s.sprite = outsideCorner;
@@ -416,6 +439,8 @@ public class LevelGenerator : MonoBehaviour
                         g.transform.localScale = new Vector3(3, 3, 0);
                         var s = g.AddComponent<SpriteRenderer>();
                         s.sprite = powerPellet;
+                        var a = g.AddComponent<Animator>();
+                        a.runtimeAnimatorController = animator;
                     }
                     if (levelMap2[j, i] == 7)
                     {
@@ -434,17 +459,19 @@ public class LevelGenerator : MonoBehaviour
                     if (levelMap3[j, i] == 1)
                     {
                         GameObject g = new GameObject("Outside Corner");
-                        g.transform.position = new Vector3(i - (Horizontal4 - 0.5f), j - (Vertical4 - 0.5f));
                         if (i==13 && j==0)
                         {
+                            g.transform.position = new Vector3(i - (Horizontal4 - 0.5f)-0.28f, j - (Vertical4 - 0.5f)+0.23f);
                             g.transform.Rotate(0, 0, 180, 0);
                         }
                         if (i==13 && j==9)
                         {
+                            g.transform.position = new Vector3(i - (Horizontal4 - 0.5f)-0.24f, j - (Vertical4 - 0.5f)-0.24f);
                             g.transform.Rotate(0, 0, 270, 0);
                         }
                         if(i==8 && j == 9)
                         {
+                            g.transform.position = new Vector3(i - (Horizontal4 - 0.5f) +0.2f, j - (Vertical4 - 0.5f)+0.285f);
                             g.transform.Rotate(0, 0, 90, 0);
                         }
                         var s = g.AddComponent<SpriteRenderer>();
@@ -465,15 +492,15 @@ public class LevelGenerator : MonoBehaviour
                     {
                         GameObject g = new GameObject("Inside Corner");
                         g.transform.position = new Vector3(i - (Horizontal4 - 0.5f), j - (Vertical4 - 0.5f));
-                        if ((j==4&&(i==0||i==6|i==11))||(i==11&&j==7)||(j==10&&i==0)||(j==7||i==3))
+                        if ((j == 4 && (i == 0 || i == 6 | i == 11)) || (i == 11 && j == 7) || (j == 10 && i == 0) || (j == 7 || i == 3))
                         {
-                            g.transform.Rotate(0,0,180,0);
+                            g.transform.Rotate(0, 0, 180, 0);
                         }
-                        if ((j==2&&(i==6||i==11))||(j==6&&(i==3||i==6||i==11)))
+                        if ((j == 2 && (i == 6 || i == 11)) || (j == 6 && (i == 3 || i == 6 || i == 11)))
                         {
-                            g.transform.Rotate(0,180,0,0);
+                            g.transform.Rotate(0, 180, 0, 0);
                         }
-                        if (j==12&&i==3)
+                        if (j == 12 && i == 3)
                         {
                             g.transform.Rotate(0, 0, 180, 0);
                         }
@@ -481,9 +508,21 @@ public class LevelGenerator : MonoBehaviour
                         {
                             g.transform.Rotate(0, 180, 0, 0);
                         }
-                        if ((j==10&&i==2)||(i==2&&j==4)||(j==4&&i==8))
+                        if ((j == 10 && i == 2) || (i == 2 && j == 4) || (j == 4 && i == 8))
                         {
                             g.transform.Rotate(0, 0, 270, 0);
+                        }
+                        if (i == 3 && j == 12)
+                        {
+                            g.transform.Rotate(0, 180, 0, 0);
+                        }
+                        if (i == 3 && j == 6)
+                        {
+                            g.transform.Rotate(0, 0, 180, 0);
+                        }
+                        if (i == 8 && j == 7)
+                        {
+                            g.transform.Rotate(0, 180, 0, 0);
                         }
                         var s = g.AddComponent<SpriteRenderer>();
                         s.sprite = insideCorner;
@@ -521,6 +560,8 @@ public class LevelGenerator : MonoBehaviour
                         g.transform.localScale = new Vector3(3, 3, 0);
                         var s = g.AddComponent<SpriteRenderer>();
                         s.sprite = powerPellet;
+                        var a = g.AddComponent<Animator>();
+                        a.runtimeAnimatorController = animator;
                     }
                     if (levelMap3[j, i] == 7)
                     {
