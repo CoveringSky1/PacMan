@@ -11,7 +11,6 @@ public class PacMove : MonoBehaviour
     private Transform Target;
     private float time;
     private int current;
-    public Animator animatorController;
     public int Z;
 
     // Start is called before the first frame update
