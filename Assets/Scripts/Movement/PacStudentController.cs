@@ -38,7 +38,7 @@ public class PacStudentController : MonoBehaviour
 
     public void AddTween(Transform targetObject, Vector3 startPos, Vector3 endPos, float duration)
     {
-            activeTween = new Tween(targetObject, startPos, endPos, Time.time, duration);
+        activeTween = new Tween(targetObject, startPos, endPos, Time.time, duration);
     }
 
 }

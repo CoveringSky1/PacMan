@@ -13,6 +13,7 @@ public class InputManager : MonoBehaviour
     public int x = 1;
     public int y = 1;
     public AudioSource walking;
+    public AudioSource Eaten;
     public int[,] level2      = { { 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 7, 7, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1 }, //x0-27  1-28
                                   { 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 2 },
                                   { 2, 5, 3, 4, 4, 3, 5, 3, 4, 4, 4, 3, 5, 4, 4, 5, 3, 4, 4, 4, 3, 5, 3, 4, 4, 3, 5, 2 },
@@ -197,5 +198,12 @@ public class InputManager : MonoBehaviour
     public string getCurrentInput()
     {
         return currentInput;
+    }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        Destroy(collision.gameObject);
+        GetComponent<Score>().setScore(10);
+        Eaten.Play();
     }
 }
